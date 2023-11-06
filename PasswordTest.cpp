@@ -24,3 +24,13 @@ TEST(PasswordTest, single_letter_password)
 	int actual = my_password.count_leading_characters("Z");
 	ASSERT_EQ(1,actual);
 }
+TEST (PasswordTest, multi_letter_password){
+	Password multi_pass ;
+	int actual = multi_pass.count_leading_characters("AAA");
+	ASSERT_EQ(3, actual);
+}
+TEST (PasswordTest, mix_password){
+	Password mix_passwords;
+	int actual = mix_passwords.count_leading_characters("AwAlop21qA");
+	ASSERT_EQ(3, actual);
+}
